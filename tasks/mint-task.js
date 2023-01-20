@@ -10,5 +10,5 @@ task("mint", "Mints a given amount of tokens to a given address")
         console.log(`Minting ${value} tokens ...`)
         const transactionResponse = await AToken.mint(toaddress, hre.ethers.utils.parseEther(value.toString()))
         await transactionResponse.wait(1)
-        console.log(`Minted to ${toaddress} !!`)
+        console.log(`Minted to ${toaddress} !`)
     });
