@@ -1,4 +1,3 @@
-const {networkConfig} = require("../helper-hardhat-config")
 const {network} = require("hardhat")
 const {verify} = require("../utils/verify")
 
