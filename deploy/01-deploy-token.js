@@ -9,9 +9,11 @@ module.exports.default = async({getNamedAccounts, deployments}) => {
         from: deployer,
         args: [],
         log: true,
+        waitConfirmations: network.config.blockConfirmations || 1
     })
 
     if(network.config.chainId !== 31337 && process.env.ETHERSCAN_API_KEY){
+
        await verify(Token.address, [])
     }
 }
